@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Music Player</title>
+</head>
+
+<body>
+    <header>
+
+        <nav id="navbar" class="flex">
+            <div id="branding" class="flex">
+                <a href=""><img class="circle" src="./media/music_player.png" alt="" /></a>
+                <a id="brand_name" href="">
+                    <span id="name1">Ninja</span>
+                    <span id="name2">Studio</span>
+                </a>
+            </div>
+            <a href="">Favourites</a>
+            <ul class="flex">
+                <li id="search">
+                    <form id="search_form" action="">
+                        <button id="searchicon" type="submit">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </button>
+                        <input type="text" placeholder="Search" />
+                        <button id="micicon" type="submit">
+                            <span class="input-group-text"><i class="fas fa-microphone"></i></span>
+                        </button>
+                    </form>
+                </li>
+                <li>
+                    <button type="submit" class="bell">
+                        <span><i class="fas fa-bell"></i></span>
+                    </button>
+                </li>
+                <li id="profile_pic ">
+                    <a href=""><img class="circle" src="./media/profile.jpg" alt="" /></a>
+                </li>
+            </ul>
+            <!-- <div class="hamburger-menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div> -->
+        </nav>
+        <nav class="dropdown">
+            <a class="dropbtn"><i class="fas fa-bars"></i></a>
+            <div class="dropdown-content">
+                <a href="#">Log In/Sign Up</a>
+                <a href="#">Home</a>
+                <a href="#">Search</a>
+                <a href="#">Alerts</a>
+                <a href="#">Favourites</a>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="main_container">
+            <div class="band">
+                <div class="image-slider">
+                    <div class="navigation-buttons">
+                        <div class="previous nav-btn">
+                            <i class="fas fa-angle-left"></i>
+                        </div>
+                        <div class="next nav-btn"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                    <div class="slider-carousel">
+                        <div class="images main">
+                            <img src="media/coldplay3.jpg" alt="coldplay1" />
+                        </div>
+                        <div class="images">
+                            <img src="media/coldplay1.jpg" alt="coldplay2" />
+                        </div>
+                        <div class="images">
+                            <img src="media/coldplay4.jpg" alt="coldplay2" />
+                        </div>
+
+                    </div>
+                </div>
+                <div class="band_info">
+                    <h1>Coldplay</h1>
+                    <p>British Band</p>
+                    <p>Coldplay is a British rock band formed in London in 1997. They consist of vocalist and pianist
+                        Chris Martin, guitarist Jonny Buckland, bassist Guy Berryman, drummer Will Champion and creative
+                        director Phil Harvey. They met at University College London and began playing music together
+                        from 1996 to 1998, initially calling themselves Starfish. The band's debut album, Parachutes
+                        (2000), included their breakthrough single "Yellow" and received a Brit Award for British Album
+                        of the Year, a Grammy Award for Best Alternative Music Album and a Mercury Prize nomination.</p>
+                    <div>
+                        <button id="play" type="button">Play All</button>
+                        <button id="follow" type="button">Follow</button>
+                    </div>
+                    <p>247 tracks | 128 Albums</p>
+                </div>
+            </div>
+            <aside id="similar_artists" class="vertical_lists">
+                <div class="aside_header">
+                    <h5>Similar Artists</h5>
+                    <p>View all</p>
+                </div>
+                <div class="artists">
+                    <!-- <img class="image_resize" src="https://picsum.photos/seed/picsum/200/300" alt=""> -->
+                    <img class="image_resize" src="media/coldplay2.jpg" alt="">
+                    <div>
+                        <h6>Imagine Dragons</h6>
+                        <p>Pop Band</p>
+                    </div>
+                    <div class="play_time">
+                        <span>...</span>
+                        <span>4:44</span>
+                    </div>
+                </div>
+                <div class="artists">
+                    <img class="image_resize" src="media/coldplay2.jpg" alt="">
+
+                    <div>
+                        <h6>Imagine Dragons</h6>
+                        <p>Pop Band</p>
+                    </div>
+                    <div class="play_time">
+                        <span>...</span>
+                        <span>4:44</span>
+                    </div>
+                </div>
+                <div class="artists">
+                    <img class="image_resize" src="media/coldplay2.jpg" alt="">
+                    <div>
+                        <h6>Imagine Dragons</h6>
+                        <p>Pop Band</p>
+                    </div>
+                    <div class="play_time">
+                        <span>...</span>
+                        <span>4:44</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <section class="main_container">
+            <div id="queue">
+                <div class="song_card">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize" src="https://picsum.photos/seed/picsum/200/300" alt="">
+                        <div>
+                            <h6>Mirage</h6>
+                            <p>Else</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card">
+                    <div class="song_detail">
+                        <p class="hidden">0</p>
+                        <img id class="image_resize_30 player_gif" src="media/EQ_accent.gif" alt="">
+                        <img class="image_resize" src="http://i.stack.imgur.com/2OrtT.jpg" alt="">
+                        <div>
+                            <h6>Worry Bout us</h6>
+                            <p>Rosie Lowe</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize" src="https://source.unsplash.com/category/coldplay" alt="">
+                        <div>
+                            <h6>New Skin</h6>
+                            <p>Flume</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize" src="https://picsum.photos/seed/picsum/200/300" alt="">
+                        <div>
+                            <h6>Worry Bout us</h6>
+                            <p>Rosie Lowe</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize" src="https://source.unsplash.com/random?sig=123" alt="">
+                        <div>
+                            <h6>New Skin</h6>
+                            <p>Flume</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize" src="https://picsum.photos/seed/picsum/200/300" alt="">
+                        <div>
+                            <h6>Mirage</h6>
+                            <p>Else</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <aside id="recently_played" class="vertical_lists">
+                <div class="aside_header">
+                    <h5>Recently Played</h5>
+                    <p>View all</p>
+                </div>
+                <div class="song_card bg-color">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize_30" src="https://picsum.photos/seed/picsum/200/300" alt="">
+                        <div>
+                            <h6>Mirage</h6>
+                            <p>Else</p>
+                        </div>
+                    </div>
+                    <div class="song_icons bg-color">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card bg-color">
+                    <div class="song_detail">
+                        <p class="hidden">0</p>
+                        <img class="player_gif" src="media/EQ_accent.gif" alt="">
+                        <img class="image_resize_30" src="http://i.stack.imgur.com/2OrtT.jpg" alt="">
+                        <div>
+                            <h6>Worry Bout us</h6>
+                            <p>Rosie Lowe</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card bg-color">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize_30" src="https://source.unsplash.com/category/coldplay" alt="">
+                        <div>
+                            <h6>New Skin</h6>
+                            <p>Flume</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card bg-color">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize_30" src="https://picsum.photos/seed/picsum/200/300" alt="">
+                        <div>
+                            <h6>Worry Bout us</h6>
+                            <p>Rosie Lowe</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="song_card bg-color">
+                    <div class="song_detail">
+                        <p>0</p>
+                        <img class="image_resize_30" src="https://source.unsplash.com/random?sig=123" alt="">
+                        <div>
+                            <h6>New Skin</h6>
+                            <p>Flume</p>
+                        </div>
+                    </div>
+                    <div class="song_icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_container">
+        <div class="artist_info">
+            <div class="song_card">
+                <div class="song_detail">
+                    <img class="image_resize" src="media/john_lennon.jpg" alt="">
+                    <div>
+                        <h6 class="song_name">Imagine by John Lennon</h6>
+                        <p>John Lennon</p>
+                    </div>
+                </div>
+                <div class="song_icons">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div class="player_controls">
+            <div class="icons">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="fas fa-pause-circle"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo"></i>
+            </div>
+            <div id="progress">
+                <span>1:39</span>
+                <input id="myProgressBar" class="progressbar" type="range" name="range" min="0" max="100" />
+                <span>4:44</span>
+            </div>
+        </div>
+        <div class="misc_controls">
+            <i class="fas fa-list"></i>
+            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-volume-up"></i>
+            <input id="VolProgressBar" class="progressbar" type="range" name="range" min="0" max="100" />
+            <i class="fas fa-expand"></i>
+        </div>
+    </div>
+    </footer>
+</body>
+
+<script src="script.js"></script>
+
+</html>

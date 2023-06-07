@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+:root {
+    /* header */
+    --mainblue: #0b1026;
+    --shadeblue: #11193e;
+    --mainfontcolor: #eff1f6;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    /* background-color: var(--blue); */
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    color: #eff1f6;
+    
+}
+
+/* Common Classes */
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.image_resize {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+.image_resize_30 {
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Header Section */
+
+header {
+    /* height: 15vh; */
+    width: 100%;
+    background-color: var(--mainblue);
+}
+
+/* Navigation Bar */
+#navbar {
+    padding: 15px 0;
+    font-family: "Ubuntu", sans-serif;
+    color: #eff1f6;
+
+}
+
+nav ul {
+    list-style: none;
+    width: 35vw;
+}
+
+ nav a {
+    text-decoration: none;
+    color: #eff1f6;
+} 
+
+nav a:hover {
+    color: #797e8a;
+}
+
+#brand_name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+#name1 {
+    font-size: small;
+}
+
+#name2 {
+    font-size: large;
+}
+
+#search {
+    width: 20vw;
+    height: 5vh;
+}
+
+#search_form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#search_form input {
+    padding-left: 25px;
+    background-color: var(--shadeblue);
+    color: #8093a2;
+    border: none;
+    /* border-radius: 10%; */
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+#search_form button {
+    background-color: var(--shadeblue);
+    border: none;
+    /* color: #eff1f6; */
+    color: #8093a2;
+}
+
+.bell {
+    background-color: var(--mainblue);
+    border: none;
+    color: #eff1f6;
+}
+
+#searchicon {
+    margin-right: -20px;
+    z-index: 1;
+    border-radius: 20% 0 0 20%;
+}
+
+#micicon {
+    border-radius: 0 20% 20% 0;
+}
+
+.dropdown {
+    position: relative;
+    display: none;
+    left: 90%;
+  }
+  .dropbtn {
+    font-size: larger;
+    color: lightgrey;
+  }
+ 
+.dropdown-content a:hover {background-color: #554646;}
+
+.dropdown:hover .dropdown-content {display: block;} 
+
+/* Main Section */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainblue);
+}
+
+body p {
+    color:#8093a2;
+    font-size: 0.6rem;
+}
+main i {
+    color:#8093a2;
+}
+
+.artist_info .song_detail > p, .artist_info .song_detail > div {
+    padding: 0 10px;
+  }
+
+/*Playlist */
+
+/* Image Carousal */
+.image-slider {
+    width: 35%;
+    /* height: auto; */
+    position: relative;
+    margin: 0 auto;
+}
+.navigation-buttons .next {
+    right: 10px;
+    position: absolute;
+    font-size: 25px;
+    z-index: 10;
+    top: 40%;
+    display: none;
+}
+
+.navigation-buttons .previous {
+    position: absolute;
+    z-index: 10;
+    font-size: 25px;
+    top: 40%;
+    left: 10px;
+    font-weight: 700;
+    display: none;
+}
+
+.slider-carousel {
+    transition: all 0.3s ease;
+  
+}
+.slider-carousel img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.images {
+    position: absolute;
+    display: none;
+    height: 100%;
+}
+
+.images img {
+    object-fit: cover;
+    height: 100%;
+}
+.main {
+    display: block;
+}
+/* Image Carousal End */
+
+.band {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    /* height: 40vh; */
+
+}
+.band_info {
+    width: 65%;
+    padding: 0 20px;
+    background-color: #131b40;
+    font-size: small;
+}
+#follow {
+    display: inline-block;
+    margin: 40px 0 0 30px;
+    background-color: transparent;
+    border: none;
+    color: #abb1cb;
+    cursor: pointer;
+}
+
+#play {
+    background: linear-gradient(to right, #4829b5 20%, #a943d7);
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: #abb1cb;
+    text-align: center;
+    display: inline-block;
+    font-size: 0.8rem;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.vertical_lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#similar_artists {
+    width: 30%;
+    padding-left: 20px;
+    /* font-size: small; */
+}
+
+.artists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: var(--mainblue);
+}
+.artists h6 {
+    margin: 5px 0;
+}
+
+.play_time {
+    margin-bottom: auto;
+}
+.play_time span {
+    display: block;
+    font-size: smaller;
+    color: #8093a2;
+}
+
+.song_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191e32;
+    margin-top: 10px;
+}
+.song_detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.song_detail div * {
+    margin: 5px 0;
+}
+.song_detail > p, .song_detail > div  {
+    padding: 0 20px;
+}
+
+#queue {
+    width: 70%;
+    counter-reset: section;
+}
+#recently_played {
+    counter-reset: section;
+    width: 30%;
+    padding-left: 15px;
+}
+.hidden {
+    visibility: hidden;
+}
+.player_gif {
+    position: absolute;
+    z-index: 7;
+    left: 5%;
+    bottom: 30%;
+    width: 20px;
+    height: 20px;
+}
+
+#recently_played .song_icons i:nth-child(2) {
+    display: none;
+}
+
+.song_detail > p:after {
+    counter-increment: section;
+    content: counter(section);
+}
+.song_icons i {
+    padding: 0 12px;
+    font-size: 400;
+}
+
+.aside_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bg-color {
+    background-color: var(--mainblue);
+}
+.song_name {
+    width:6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+}
+
+/* Footer Section */
+
+footer {
+    position: sticky;
+    background-color: #282828;
+    bottom: 0px;
+    height: 12vh;
+    padding: 8px 0;
+    z-index: 10;
+    
+}
+.footer_container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.artist_info .song_icons > i {
+    padding: 0 5px;
+}
+.artist_info .song_card {
+    background-color: transparent;
+    margin-top: 0;
+}
+.player_controls {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.progressbar {
+    background: linear-gradient(to right, green 50%, #404040 50%);
+    border-radius: 8px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+
+#myProgressBar {
+    height: 5px;
+    width: 87%;
+}
+
+#progress {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+#progress span {
+    color: #dedede;
+    font-size: 0.5rem;
+}
+
+.icons {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    color: #dedede;
+    font-size: 0.8rem;
+}
+
+.icons i:hover {
+    color: #8093a2;
+}
+
+.misc_controls {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #dedede;
+    font-size: 0.8rem;
+}
+
+.misc_controls i:hover {
+    color: #8093a2;
+}
+
+#VolProgressBar {
+    height: 5px;
+    width: 50%;;
+}
+
+
+.main_container {
+    display: flex;
+    width: 80%;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+
+    #brand_name {
+        display: none;
+    }
+    .bell {
+        display: none;
+    }
+    .misc_controls {
+        display: none;
+    }
+    .player_controls {
+        width: 100%;
+    }
+    .artist_info {
+        display: none;
+    }
+    .icons {
+        width: 40%;
+    }
+    #similar_artists {
+        display: none;
+    }
+    #recently_played {
+        display: none;
+    }
+    .band {
+        width: 100%;
+    }
+    .band_info {
+        width: 100%;
+    }
+    #queue {
+        width: 100%;
+    }
+    nav ul {
+        width: 60vw;
+    }
+    #search {
+        width: 30vw;
+    }
+}
